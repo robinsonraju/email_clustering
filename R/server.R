@@ -53,6 +53,7 @@ shinyServer(function(input, output) {
   
   # Frequent terms
   output$freqterms <- renderPlot({
+    pal2=brewer.pal(8,"Dark2")
     wordcloud(freq.terms,freq.terms.freq, scale=c(2,.2),min.freq=3,max.words=Inf, random.order=FALSE, rot.per=.15, colors=pal2)
   })
 })
